@@ -70,3 +70,9 @@ a:hover {
     background-color: #eee;
       font-size: 0.9rem;
   }
+  
+.nn-diagram {
+  display: block;
+  margin: 20px auto;
+  max-width: 900px;
+}
