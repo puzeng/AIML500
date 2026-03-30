@@ -330,5 +330,198 @@
        style="max-width:100%; height:auto;">
 
 </section>
+<section class="project">
+  <h2>Artifact 8</h2>
+  <h3>Explainable AI, Validation, and Reliability in Large Language Models</h3>
+
+  <p><strong>Introduction:</strong> This artifact presents a visual and structured study of explainable AI in relation to prominent large language models, including GPT, Claude, Gemini, and LLaMA. The artifact focuses on why AI explainability matters, what makes these models difficult to interpret, how leading AI organizations are working to improve transparency, and how validation methods and performance metrics support reliability and accountability. The purpose is to create a clear comparative view that helps organize complex ideas into an accessible format for technical learning and portfolio presentation.</p>
+
+  <p><strong>Description:</strong> The artifact is designed as an infographic or slide style presentation supported by tables. It explains the meaning and importance of explainable AI, compares the major explainability challenges associated with large language models, summarizes current industry efforts to improve transparency, and documents how validation techniques and evaluation metrics are used to assess trustworthiness. Tables are used throughout the artifact to create a side by side view that makes similarities and differences across models easier to interpret.</p>
+
+  <p><strong>Objective:</strong> The objective of this artifact is to document my learning about explainable AI and model accountability by organizing current challenges, evaluation practices, and industry solutions into a comparative framework. By using tables to compare models and techniques, the artifact is intended to support quick understanding of how explainability, validation, and performance measurement work together to strengthen trust in modern AI systems.</p>
+
+  <p><strong>Process:</strong> To create this artifact, I first researched major challenges involved in making large language model decisions understandable, especially for GPT, Claude, Gemini, and LLaMA. I then organized the material into four core themes: the meaning and importance of explainable AI, common explainability barriers, validation and performance metrics, and current solutions used by leading AI organizations. After identifying the main concepts, I structured the content into tables so that each topic could be reviewed in a side by side format. This process helped me connect model transparency with practical evaluation methods and gave me a clearer understanding of how explainability contributes to trustworthy AI development.</p>
+
+  <p><strong>Tools/Technologies Used:</strong> HTML and CSS were used to organize the artifact as a structured web based portfolio entry. HTML table elements were used as the main tool for building the comparative framework across models, challenges, validation methods, and explainability techniques. CSS supports readability, spacing, and layout so the information can be presented clearly in a professional infographic or slide style format.</p>
+
+  <p><strong>Value Proposition:</strong> This artifact creates a side by side comparative view of explainability challenges, validation practices, and transparency strategies across leading large language models. The table based structure helps reveal common problem areas shared by GPT, Claude, Gemini, and LLaMA while also showing how organizations respond differently through documentation, interpretability research, evaluation systems, and governance practices. As a result, the artifact creates a clear view that helps quickly establish a general understanding of explainable AI and its role in building reliable and accountable models.</p>
+
+  <h4>Explainable AI and Its Importance</h4>
+
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Concept</th>
+      <th>Definition</th>
+      <th>Why It Matters</th>
+      <th>Relevance to Large Language Models</th>
+    </tr>
+    <tr>
+      <td>Explainable AI</td>
+      <td>Explainable AI refers to methods and practices that help people understand how an AI system produces outputs or decisions.</td>
+      <td>It supports transparency, accountability, safer deployment, and informed human oversight.</td>
+      <td>Large language models generate highly fluent outputs, but their internal reasoning is often difficult for users and developers to interpret directly.</td>
+    </tr>
+    <tr>
+      <td>Transparency</td>
+      <td>Transparency means making model behavior, limitations, intended uses, and evaluation results more visible.</td>
+      <td>It helps users judge whether a system is appropriate for a given task and risk level.</td>
+      <td>For generative AI, transparency is important because confident outputs can still contain errors, bias, or unsupported claims.</td>
+    </tr>
+    <tr>
+      <td>Accountability</td>
+      <td>Accountability involves documenting how systems are tested, monitored, and governed.</td>
+      <td>It improves trust and supports regulatory and organizational review.</td>
+      <td>Large language models are increasingly used in education, healthcare, business, coding, and decision support, where failures can have real consequences.</td>
+    </tr>
+  </table>
+
+  <h4>Challenges in Explainability by Model</h4>
+
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Model Family</th>
+      <th>Core Explainability Challenge</th>
+      <th>Why the Challenge Exists</th>
+      <th>Practical Impact</th>
+    </tr>
+    <tr>
+      <td>GPT</td>
+      <td>High model scale and layered behavior make it difficult to trace why a specific response was generated.</td>
+      <td>Outputs emerge from very large parameter interactions rather than transparent rule based logic.</td>
+      <td>Users may receive persuasive responses without a clear view of the internal basis for the answer.</td>
+    </tr>
+    <tr>
+      <td>Claude</td>
+      <td>Helpful conversational behavior can mask complex internal representations that are difficult to inspect directly.</td>
+      <td>Model behavior depends on distributed features and latent concepts that do not map neatly to human readable rules.</td>
+      <td>It can be hard to separate surface level explanation from actual internal model mechanisms.</td>
+    </tr>
+    <tr>
+      <td>Gemini</td>
+      <td>Multimodal capabilities increase interpretability difficulty because reasoning may involve text, image, and tool related signals.</td>
+      <td>More input types and system components create more pathways that influence outputs.</td>
+      <td>Explaining decisions consistently across modalities becomes more complex.</td>
+    </tr>
+    <tr>
+      <td>LLaMA</td>
+      <td>Open availability increases flexibility for research but also creates explainability challenges across many downstream fine tuned variants.</td>
+      <td>Different developers may adapt the model in different ways, reducing consistency in documentation and interpretability practice.</td>
+      <td>Understanding behavior may depend on the specific adapted version rather than only the base model.</td>
+    </tr>
+  </table>
+
+  <h4>Common Obstacles in Explainability</h4>
+
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Obstacle</th>
+      <th>Description</th>
+      <th>Why It Reduces Explainability</th>
+    </tr>
+    <tr>
+      <td>Model Complexity</td>
+      <td>Large language models contain massive numbers of parameters and distributed internal features.</td>
+      <td>There is no simple one to one path from input to output that a human can easily inspect.</td>
+    </tr>
+    <tr>
+      <td>Opaque Decision Processes</td>
+      <td>Models generate tokens through internal activations and probability distributions rather than explicit reasoning steps visible to users.</td>
+      <td>People may see the answer but not the true internal basis for that answer.</td>
+    </tr>
+    <tr>
+      <td>Emergent Behavior</td>
+      <td>New abilities can appear at scale in ways that are not fully predictable from smaller systems.</td>
+      <td>This makes behavior harder to explain before deployment.</td>
+    </tr>
+    <tr>
+      <td>Benchmark Limitations</td>
+      <td>Some evaluations can be incomplete, narrow, or affected by contamination.</td>
+      <td>Good benchmark scores do not always mean users can understand or trust individual decisions.</td>
+    </tr>
+    <tr>
+      <td>Regulatory Pressure</td>
+      <td>Organizations increasingly need to document model use, risk, limitations, and governance.</td>
+      <td>Insufficient explainability can make compliance and responsible deployment harder.</td>
+    </tr>
+  </table>
+
+  <h4>Validation and Performance Metrics</h4>
+
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Validation Element</th>
+      <th>Purpose</th>
+      <th>Examples of Metrics</th>
+      <th>Contribution to Trust</th>
+    </tr>
+    <tr>
+      <td>Capability Evaluation</td>
+      <td>Measures how well the model performs intended tasks.</td>
+      <td>Accuracy, pass rate, benchmark score, task completion rate</td>
+      <td>Shows whether the model can reliably perform its target functions.</td>
+    </tr>
+    <tr>
+      <td>Factuality Evaluation</td>
+      <td>Assesses whether answers are correct, grounded, and non hallucinated.</td>
+      <td>Factual accuracy, hallucination rate, precision on fact seeking tasks</td>
+      <td>Supports confidence that outputs are not merely fluent but also dependable.</td>
+    </tr>
+    <tr>
+      <td>Safety Evaluation</td>
+      <td>Tests whether the model avoids harmful, biased, or policy violating outputs.</td>
+      <td>Safety violation rate, refusal quality, over refusal rate, toxicity score</td>
+      <td>Helps show that reliability includes behavioral safety, not just usefulness.</td>
+    </tr>
+    <tr>
+      <td>Robustness Evaluation</td>
+      <td>Examines consistency under adversarial prompts, edge cases, or distribution changes.</td>
+      <td>Jailbreak resistance, adversarial success rate, robustness score</td>
+      <td>Indicates whether the model remains dependable beyond ideal conditions.</td>
+    </tr>
+    <tr>
+      <td>Bias and Fairness Evaluation</td>
+      <td>Checks whether outputs show harmful stereotyping or uneven performance across groups.</td>
+      <td>Bias benchmark results, disparity measures, representational harm indicators</td>
+      <td>Supports accountability and more equitable deployment.</td>
+    </tr>
+    <tr>
+      <td>Calibration and Uncertainty</td>
+      <td>Evaluates whether confidence aligns with actual correctness.</td>
+      <td>Calibration error, confidence reliability, abstention quality</td>
+      <td>Improves trust because the model should signal uncertainty when unsure.</td>
+    </tr>
+  </table>
+
+  <h4>Current Solutions and Techniques by Leading Organizations</h4>
+
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Organization / Model Family</th>
+      <th>Current Explainability or Transparency Efforts</th>
+      <th>How the Effort Improves Trust</th>
+    </tr>
+    <tr>
+      <td>OpenAI / GPT</td>
+      <td>Model behavior specifications, system cards, neuron explanation research, and evaluation frameworks.</td>
+      <td>These practices help explain intended behavior, document limitations, and create repeatable testing for capability and safety.</td>
+    </tr>
+    <tr>
+      <td>Anthropic / Claude</td>
+      <td>Mechanistic interpretability research, concept mapping, transparency hub, and public system cards.</td>
+      <td>These efforts aim to understand internal representations more directly while also disclosing evaluation results and model risks.</td>
+    </tr>
+    <tr>
+      <td>Google / Gemini</td>
+      <td>Model cards, responsible AI guidance, explainability tools, and lifecycle safety evaluations.</td>
+      <td>These practices support structured transparency about limitations, mitigation approaches, and safety performance.</td>
+    </tr>
+    <tr>
+      <td>Meta / LLaMA</td>
+      <td>Model transparency materials, responsible use guidance, system level documentation, and broad benchmark evaluation.</td>
+      <td>These approaches help users understand intended uses, evaluation scope, and safety considerations for open weight models.</td>
+    </tr>
+  </table>
+
+  </section>
 
   </section>
