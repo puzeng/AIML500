@@ -523,5 +523,190 @@
   </table>
 
   </section>
+  <section class="project">
+  <h2>Artifact 9</h2>
+  <h3>Pretrained Model Trade Offs Across NLP, Generative AI, Vision, and Tabular Learning</h3>
+
+  <p><strong>Introduction:</strong> This artifact presents a portfolio style comparative analysis of pretrained models across multiple AI domains, including natural language processing, generative AI, computer vision, and tabular learning. The artifact focuses on the practical challenge of selecting models that balance predictive performance, computational efficiency, and explainability. In real world deployment, the best model is not always the most accurate model. Organizations often need to consider model size, memory requirements, inference speed, transparency, and integration complexity before choosing a solution.</p>
+
+  <p><strong>Description:</strong> The artifact is designed as a structured HTML portfolio entry that compares five pretrained models: DistilBERT, gpt-oss-20b, MobileNetV3 Large, EfficientNet B0, and TabPFN 2.5. The comparison is organized through a decision matrix and supporting tables so that trade offs can be reviewed in a side by side format. The artifact emphasizes explainability and deployment practicality in addition to benchmark performance.</p>
+
+  <p><strong>Objective:</strong> The objective of this artifact is to document how pretrained models differ across domains and to show how model selection depends on the balance between quality, speed, size, and interpretability. By presenting these models in a single comparative framework, the artifact supports faster and more informed decision making for portfolio, academic, and business contexts.</p>
+
+  <p><strong>Methodology:</strong> The models were selected to span multiple domains and deployment scenarios. DistilBERT and gpt-oss-20b represent language models with different goals, one optimized for efficient language understanding and the other for open weight reasoning and text generation. MobileNetV3 Large and EfficientNet B0 represent lightweight and accuracy focused vision models. TabPFN 2.5 was selected to represent the emerging tabular foundation model category. Data points were compiled from official model cards, research papers, and framework documentation. Because each domain uses different benchmark traditions, the matrix reports domain specific accuracy rather than forcing a misleading single cross domain score.</p>
+
+  <p><strong>Tools/Technologies Used:</strong> HTML and CSS were used to create a web based portfolio artifact. HTML tables provide the main comparison structure, while CSS badges and status labels improve readability. The design is intended to resemble an infographic style portfolio entry that is easy to review quickly.</p>
+
+  <p><strong>Value Proposition:</strong> This artifact creates a clear decision support view of how pretrained models compare when performance is not the only concern. It highlights that smaller or more efficient models may be better choices for mobile, edge, or low latency systems, while larger models may be more suitable for reasoning rich workflows. It also shows that explainability tends to vary by domain, with tabular and smaller encoder models often being easier to justify than large autoregressive systems.</p>
+
+  <h4>Why Explainability Matters in Model Selection</h4>
+
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Selection Factor</th>
+      <th>Meaning</th>
+      <th>Why It Matters</th>
+      <th>Practical Impact</th>
+    </tr>
+    <tr>
+      <td>Performance</td>
+      <td>How well the model performs on its domain benchmark or task.</td>
+      <td>Higher performance can improve business value, prediction quality, and user trust.</td>
+      <td>Useful for applications where accuracy directly affects outcomes such as diagnostics, content understanding, or forecasting.</td>
+    </tr>
+    <tr>
+      <td>Model Size</td>
+      <td>The number of parameters or checkpoint size required to store and run the model.</td>
+      <td>Smaller models are often easier to deploy and cheaper to host.</td>
+      <td>Important for mobile, browser, edge, and resource constrained settings.</td>
+    </tr>
+    <tr>
+      <td>Inference Speed</td>
+      <td>How quickly the model produces outputs once deployed.</td>
+      <td>Fast inference improves responsiveness and user experience.</td>
+      <td>Critical for chat systems, live vision pipelines, and decision support systems.</td>
+    </tr>
+    <tr>
+      <td>Explainability</td>
+      <td>How easily people can understand, audit, or justify the model’s behavior.</td>
+      <td>Supports trust, governance, and responsible deployment.</td>
+      <td>Especially important in healthcare, finance, education, and regulated environments.</td>
+    </tr>
+    <tr>
+      <td>Integration Complexity</td>
+      <td>How difficult it is to fine tune, host, optimize, and maintain the model in a production workflow.</td>
+      <td>Even strong models may be impractical if infrastructure needs are too high.</td>
+      <td>Affects implementation time, maintenance cost, and portability.</td>
+    </tr>
+  </table>
+
+  <h4>Decision Matrix for Pretrained Model Selection</h4>
+
+  <table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+    <tr style="background-color: #f2f2f2;">
+      <th>Model</th>
+      <th>Domain</th>
+      <th>Model Size</th>
+      <th>Accuracy / Benchmark</th>
+      <th>Speed</th>
+      <th>Explainability</th>
+      <th>Additional Considerations</th>
+      <th>Best Fit</th>
+    </tr>
+    <tr>
+      <td><strong>DistilBERT</strong></td>
+      <td>NLP</td>
+      <td><span style="color: green;">66M params</span></td>
+      <td>GLUE score: 77.0</td>
+      <td><span style="color: green;">Fast</span><br>410s full STS-B CPU pass</td>
+      <td><span style="color: orange;">Moderate</span></td>
+      <td>40% smaller and 60% faster than BERT; easier to deploy for classification and QA tasks.</td>
+      <td>Efficient text classification, sentiment analysis, lightweight NLP services</td>
+    </tr>
+    <tr>
+      <td><strong>gpt-oss-20b</strong></td>
+      <td>Generative AI</td>
+      <td><span style="color: red;">20.9B total / 3.6B active</span></td>
+      <td>MMLU: 85.3</td>
+      <td><span style="color: orange;">Medium</span><br>Positioned for low latency local use</td>
+      <td><span style="color: red;">Low</span></td>
+      <td>Strong reasoning and generation; open weight flexibility; higher infrastructure and safety review needs.</td>
+      <td>Agentic workflows, local reasoning systems, advanced text generation</td>
+    </tr>
+    <tr>
+      <td><strong>MobileNetV3 Large</strong></td>
+      <td>Computer Vision</td>
+      <td><span style="color: green;">5.48M params</span><br>21.1 MB</td>
+      <td>ImageNet top 1: 75.274%</td>
+      <td><span style="color: green;">Very fast</span><br>0.22 GFLOPS</td>
+      <td><span style="color: orange;">Moderate</span></td>
+      <td>Designed for efficient mobile and edge inference; excellent when latency matters more than peak accuracy.</td>
+      <td>Mobile apps, embedded vision, lightweight image classification</td>
+    </tr>
+    <tr>
+      <td><strong>EfficientNet B0</strong></td>
+      <td>Computer Vision</td>
+      <td><span style="color: green;">5.29M params</span><br>20.5 MB</td>
+      <td>ImageNet top 1: 77.692%</td>
+      <td><span style="color: orange;">Fast</span><br>0.39 GFLOPS</td>
+      <td><span style="color: orange;">Moderate</span></td>
+      <td>Better accuracy than MobileNetV3 Large with a slightly higher compute cost.</td>
+      <td>Balanced vision applications where accuracy matters more than extreme efficiency</td>
+    </tr>
+    <tr>
+      <td><strong>TabPFN 2.5</strong></td>
+      <td>Tabular</td>
+      <td><span style="color: green;">42.9 MB checkpoint</span><br>18 to 24 layer transformer</td>
+      <td>Strong benchmark leadership on tabular tasks<br>Original TabPFN tuned classification normalized ROC AUC: 0.952</td>
+      <td><span style="color: green;">Very fast</span><br>Single forward pass; TabPFN reported 5140× classification speedup</td>
+      <td><span style="color: green;">Relatively high</span></td>
+      <td>Very strong for small to medium structured datasets; easier justification than large generative models.</td>
+      <td>Clinical risk scoring, finance, churn modeling, structured business prediction</td>
+    </tr>
+  </table>
+
+  <h4>Trade Off Analysis by Domain</h4>
+
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Domain</th>
+      <th>Strongest Model in This Set</th>
+      <th>Main Strength</th>
+      <th>Main Limitation</th>
+      <th>Recommendation</th>
+    </tr>
+    <tr>
+      <td>NLP</td>
+      <td>DistilBERT</td>
+      <td>Strong efficiency with solid language understanding performance.</td>
+      <td>Less capable than larger reasoning or generative models on open ended tasks.</td>
+      <td>Choose for production text classification and extraction when low latency matters.</td>
+    </tr>
+    <tr>
+      <td>Generative AI</td>
+      <td>gpt-oss-20b</td>
+      <td>Higher reasoning and generation capacity with open weight flexibility.</td>
+      <td>Lower explainability and much higher compute requirements than encoder models.</td>
+      <td>Choose for advanced generation, reasoning, or agent based workflows that justify the extra cost.</td>
+    </tr>
+    <tr>
+      <td>Vision</td>
+      <td>EfficientNet B0</td>
+      <td>Best accuracy among the selected compact vision models.</td>
+      <td>Higher compute demand than MobileNetV3 Large.</td>
+      <td>Choose when balanced accuracy and efficiency are needed.</td>
+    </tr>
+    <tr>
+      <td>Vision</td>
+      <td>MobileNetV3 Large</td>
+      <td>Excellent mobile efficiency and smaller compute footprint.</td>
+      <td>Slightly lower accuracy than EfficientNet B0.</td>
+      <td>Choose when device constraints or response speed are the top priority.</td>
+    </tr>
+    <tr>
+      <td>Tabular</td>
+      <td>TabPFN 2.5</td>
+      <td>Very strong structured data performance with minimal tuning burden.</td>
+      <td>Best suited to small or medium tabular problems rather than very large scale tables.</td>
+      <td>Choose for tabular prediction problems where fast iteration and strong baseline performance are important.</td>
+    </tr>
+  </table>
+
+  <h4>Analysis and Recommendations</h4>
+
+  <p><strong>DistilBERT:</strong> DistilBERT offers one of the clearest efficiency focused trade offs in NLP. It preserves much of BERT’s language understanding while reducing size and inference cost. This makes it a strong choice for enterprise systems that need scalable text classification, document routing, or question answering without the overhead of larger models.</p>
+
+  <p><strong>gpt-oss-20b:</strong> gpt-oss-20b is the most capable generative model in this comparison, but it also brings the highest complexity. It is valuable when reasoning quality, adaptability, and text generation matter more than strict explainability. It is less suitable in high accountability settings unless paired with strong evaluation, monitoring, and human review.</p>
+
+  <p><strong>MobileNetV3 Large:</strong> MobileNetV3 Large is the most deployment friendly vision model in the set. It is especially attractive for edge and mobile use because it keeps computational demands low while still providing useful image classification performance.</p>
+
+  <p><strong>EfficientNet B0:</strong> EfficientNet B0 provides a stronger accuracy profile than MobileNetV3 Large while remaining compact. It is a better option when a small increase in compute is acceptable in exchange for stronger predictive performance.</p>
+
+  <p><strong>TabPFN 2.5:</strong> TabPFN 2.5 stands out because it reduces traditional tabular pipeline complexity. It is particularly compelling for domains such as healthcare, finance, and business analytics where structured datasets are common and explainability is important. Among the models in this artifact, it offers one of the best balances between speed, strong task performance, and practical interpretability.</p>
+
+  <h4>Conclusion</h4>
+
+  <p>This artifact shows that model selection is a trade off problem rather than a simple search for the highest benchmark score. DistilBERT is well suited for efficient NLP, gpt-oss-20b is strongest for flexible generative reasoning, MobileNetV3 Large is ideal for highly constrained vision deployment, EfficientNet B0 is a balanced vision option, and TabPFN 2.5 is especially promising for structured tabular prediction. The broader insight is that explainability and deployment practicality should be considered alongside accuracy whenever pretrained models are evaluated for real world use.</p>
+</section>
 
   </section>
